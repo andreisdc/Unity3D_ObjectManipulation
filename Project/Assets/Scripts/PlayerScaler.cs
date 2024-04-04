@@ -8,13 +8,11 @@ public class PlayerScaler : MonoBehaviour
 
     void Update()
     {
-        // Mărire la apăsarea tastei 'P'
         if (Input.GetKeyDown(KeyCode.P))
         {
             transform.localScale += new Vector3(_ScaleFactor, _ScaleFactor, _ScaleFactor);
         }
 
-        // Micșorare la apăsarea tastei 'O'
         if (Input.GetKeyDown(KeyCode.O))
         {
             transform.localScale -= new Vector3(_ScaleFactor, _ScaleFactor, _ScaleFactor);

@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Plane
+  - Planet
+  - Start
+  - Fly
+  - Obstacle
+  - Fuel
   layers:
   - Default
   - TransparentFX

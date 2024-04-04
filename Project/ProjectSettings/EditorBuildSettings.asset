@@ -4,5 +4,15 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Lab4/Lab4.unity
+    guid: 1a82509352002df46a4ca66e4fb842df
+  - enabled: 1
+    path: Assets/Scenes/Lab4/Lab4_Lvl2.unity
+    guid: 3db8896054bdbe749b098a8f54770bfc
+  - enabled: 1
+    path: Assets/Scenes/Lab4/Lab4_Lvl3.unity
+    guid: ebdac3692e5aaf643bbc1cb92244d530
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

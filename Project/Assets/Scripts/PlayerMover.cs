@@ -4,44 +4,21 @@ using UnityEngine;
 
 public class PlayerMover : MonoBehaviour
 {
- [SerializeField] private float _MovementSpeed = 5f;
+    [SerializeField] private float _MovementSpeed = 5f;
 
-    void Update()
+     void Update()
     {
-        // Deplasare la stânga
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.Translate(Vector3.left * _MovementSpeed * Time.deltaTime);
-        }
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float verticalInput = Input.GetAxisRaw("Vertical");
 
-        // Deplasare la dreapta
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.Translate(Vector3.right * _MovementSpeed * Time.deltaTime);
-        }
+        Vector3 movement = new Vector3(horizontalInput, 0f, verticalInput).normalized * _MovementSpeed * Time.deltaTime;
+        transform.Translate(movement);
 
-        // Deplasare înainte
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            transform.Translate(Vector3.forward * _MovementSpeed * Time.deltaTime);
-        }
-
-        // Deplasare înapoi
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            transform.Translate(Vector3.back * _MovementSpeed * Time.deltaTime);
-        }
-
-        // Deplasare în sus
         if (Input.GetKey(KeyCode.E))
         {
             transform.Translate(Vector3.up * _MovementSpeed * Time.deltaTime);
         }
 
-        // Deplasare în jos
-        if (Input.GetKey(KeyCode.Q))
-        {
-            transform.Translate(Vector3.down * _MovementSpeed * Time.deltaTime);
-        }
+    
     }
 }
